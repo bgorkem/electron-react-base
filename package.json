@@ -2,13 +2,35 @@
   "name": "electron-react-base",
   "version": "0.1.0",
   "private": true,
+  "main": "src/start.js",
+  "homepage": "./",
+  "build": {
+    "appId": "1234.56.234",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "category": "electron-apps",
+      "iconUrl": "./public/logo192.png"
+    },
+    "mac": {
+      "category": "electron-apps",
+      "iconUrl": "./public/logo192.png"
+    }
+  },
   "dependencies": {
+    "cross-env": "^6.0.3",
+    "electron": "^6.0.12",
+    "electron-is-dev": "^1.1.0",
+    "electron-reload": "^1.5.0",
+    "nodemon": "^1.19.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "electron": "cross-env NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+    "start": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -27,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron-builder": "^21.2.0"
   }
 }
