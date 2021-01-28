@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "cross-env": "^6.0.3",
-    "electron": "^6.0.12",
+    "electron": "^9.4.0",
     "electron-is-dev": "^1.1.0",
     "electron-reload": "^1.5.0",
     "lodash.template": "^4.5.0",
